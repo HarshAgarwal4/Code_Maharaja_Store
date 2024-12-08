@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.side{
+    width: 20vw;
+    height: 100vh;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    gap: 30px;
+}
+
+.side .logo{
+    height: 35%;
+    width: 100%;
+}
+
+.side .description{
+    height: 55%;
+    width: 90%;
+    color: white;
+}
+
+.side .logo img{
+    width: 90%;
+    aspect-ratio: 1/1;
+}
+
+nav{
+    width: 80vw;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: rgba(20, 182, 182, 0.809);
+    height: 15vh;
+}
+
+nav ul{ 
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    justify-content: end;
+    margin-right: 80px;
+}
+
+nav ul li{
+    padding: 25px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+}
+/*------------------------------------*/
+
+.Pcards{
+    width: 80vw;
+    height: 85vh;
+    position: fixed;
+    top: 15vh;
+    right: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: antiquewhite;
+    overflow: auto;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    width: 40%;
+    height: 70%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 10%;
+}
+.product-card img {
+    max-width: 95%;
+    aspect-ratio: 1/1;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+.product-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.product-card .price {
+    font-size: 16px;
+    color: #ff6347;
+    margin-top: 10px;
+}
+.product-card .add-to-cart {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-card .add-to-cart:hover {
+    background-color: #218838;
+}

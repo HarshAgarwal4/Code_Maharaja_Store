@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+       *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --maincolor: black;
+    --seccolor: #222222;
+    --lightcolor: #333333;
+    --txtcolor: white;
+}
+
+body{
+    background-color: var(--seccolor);
+    color: var(--txtcolor);
+}
+
+header{
+    margin-top: 40px;
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+}
+
+header h1{
+    margin: 2px auto;
+}
+
+.main .card{
+    width: 80vw;
+    height: 250px;
+    margin: 20px auto;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightcolor);
+    gap: 40px;
+}
+
+.main .card .img{
+    height: 90%;
+    width: height;
+    margin: 20px;
+}
+.main .card .img img{
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+}
+
+.main .card .info{
+    width: 75%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 25%;
+    flex-direction: column;
+}
+
+.main .card .info h2{
+    font-size: 2em;
+}
+.main .card .info p{
+    font-size: 1.8em;
+}
+
+@media screen and (max-width: 1100px) {
+    .main .card{
+        height: 200px;
+        gap: 20px;
+    }
+
+    .main .card .info h2 {
+        font-size: 1.5em;
+    }
+
+    .main .card .info p {
+        font-size: 1em;
+    }
+
+}
+
+
+@media only screen and (max-width : 750px) {
+    .main .card{
+        height: 160px;
+        gap: 5px;
+    }
+    .main .card .info h2{
+        font-size: 1.1em;
+    }
+    .main .card .info p {
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main .card{
+        height: 100px;
+        gap: 5px;
+    }
+    .main .card .info h2 {
+        font-size: 0.8em;
+    }
+
+    .main .card .info p {
+        font-size: 0.55em;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Our Products</h1>
+    </header>
+    <section class="main" id="m">
+    </section>
+    <script>
+        function createCard(img, title, info) {
+            let html = `
+             <div class="card">
+                <div class="img">
+                    <img src="products/${img}" alt="">
+                </div>
+                <div class="info">
+                    <h2>${title}</h2>
+                    <p>${info}</p>
+                </div>
+            </div>`
+            let main = document.getElementById("m")
+            main.insertAdjacentHTML("beforeend", html)
+        }
+
+        createCard("1.jpeg" ,"Apple ipad (9th gen)" ,"$22999")
+        createCard("2.jpeg" ,"Apple Macbook AIR M2)" ,"$83000")
+        createCard("3.jpeg" ,"Apple Airpods pro" ,"$17999")
+        createCard("4.jpeg" ,"Apple Watch series 9GPS" ,"$30500")
+        createCard("5.jpeg" ,"Apple Airtag pack of 4" ,"$10999")
+        createCard("6.jpeg" ,"Apple iphone 16 pro" ,"$169999")
+        createCard("7.jpeg" ,"Apple iphone 16" ,"$109999")
+        createCard("8.jpeg" ,"Apple iphone 16 pro max" ,"$184990")
+        createCard("9.jpeg" ,"Apple TV HD 32GB" ,"$14999")
+        createCard("10.jpeg" ,"Apple Macbook Air apple (8GB/512 Gb SSD)" ,"$110900")
+        createCard("11.jpeg" ,"Apple Macbook air apple M3" ,"$145990")
+    </script>   
+</body>
+
+</html>
